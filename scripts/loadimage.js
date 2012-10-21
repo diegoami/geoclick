@@ -43,18 +43,20 @@ function getImagePath(selectedMap) {
 }
 
 
-function loadImageMapping(selectedMap) {
-    //$('#mapImageId').load(getImagePath(selectedMap));
-    $('#mapImageId').attr('src',getImagePath(selectedMap));
+function loadImageMapping() {
+    //  $('#paragraphMapId').remove('#mapImageId');
+    $('#mapImageId').remove();
+    var selectedMap= $('#mapComboboxId').val();
+    var selectedImg =   getImagePath(selectedMap);
+
+    var mapImageId = $('<img style="float : left; "   id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
+    $('#paragraphMapId').append(mapImageId);
+
 }
 
 function changeImageEvent() {
     $('#hotspotFoundId').html("");
-    var selectedMap= $('#mapComboboxId').val();
-    $('#mapImageId').onload = function() {
-        fillFileComboBox();
-    }
-    loadImageMapping(selectedMap);
+    loadImageMapping();
 }
 
 
@@ -129,8 +131,8 @@ function begin() {
     var firstKey = Object.keys(imageFileMapping)[0];
     fillMapComboBox();
 
-    loadImageMapping(firstKey);
-    fillFileComboBox(firstKey );
+    loadImageMapping();
+    fillFileComboBox( );
 
 
 

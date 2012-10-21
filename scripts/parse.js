@@ -11,7 +11,7 @@
 var hotspots = [];
 
 function HotSpot(lineHotSpot) {
-    var pointRegExp = /([\w\.]+)\/([\w\s]+)\=([\d\-]+);([\d,;]+);/;
+    var pointRegExp = /([\w\.]+)\/([\w\s\'\d\-]+)\=([\d\-]+);([\d,;]+);/;
 
     var groups = pointRegExp.exec(lineHotSpot);
     if (groups != null && typeof(groups) != undefined) {
