@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Geoclick v 0.0.3</title>
+    <title>Geoclick v 0.0.4</title>
     <LINK href="css/styles.css" rel="stylesheet" type="text/css">
 
     <script src="scripts/jquery-1.8.2.js"> </script>
@@ -39,11 +39,14 @@
   </map>
 
   </p>
-  <p  ><span class="large">Hovering on hotspot...: </span>
+
+  <br>
+  <button  id="toggleTestButtonId" onclick="toggleTesting();">Test</button>
+  <br>
+  <p><span id="whereisId" class="large">Hovering on hotspot...: </span>
   </p>
-  <br>
-  <br>
   <h4 id="hotspotFoundId"></h4>
+  <p><span id="clickedOnId"></span>
   <textarea  class="large" id="pointsAreaId" cols="10" rows="30" style="display:none;"> </textarea>
 
    </textarea>

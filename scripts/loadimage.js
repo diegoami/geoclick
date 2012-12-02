@@ -9,6 +9,8 @@
 
 
 var actualPoints = [];
+var testing = false;
+var hotspots = [];
 
 function addOption(id, value) {
     var option = $('<option />');
@@ -24,11 +26,24 @@ function addArea(id, hotspot, scaling) {
     var coords = hotspot.getCoords(scaling);
     area.attr('coords', coords);
     area.mouseover( function() {
-        $('#hotspotFoundId').html($(this).attr('alt'));
-    })
+        if (!testing) {
+            $('#hotspotFoundId').html($(this).attr('alt'));
+        }
+    });
+    area.mousedown(function() {
+        if (testing) {
+            $('#clickedOnId').html($(this).attr('alt'));
+            if ($(this).attr('alt') ===  $('#hotspotFoundId').html() ) {
+                $('#hotspotFoundId').html("OK!!!");
+                window.setTimeout(pickRandomHotspot, 1000);
+            }
+        }
+    });
     area.mouseleave(function() {
-        $('#hotspotFoundId').html("");
-    })
+        if (!testing) {
+            $('#hotspotFoundId').html("");
+        }
+    });
     $(id).append(area);
 }
 
@@ -52,6 +67,7 @@ function loadImageMapping() {
     var mapImageId = $('<img style="float : left; "   id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
     $('#paragraphMapId').append(mapImageId);
 
+
 }
 
 function changeImageEvent() {
@@ -62,7 +78,7 @@ function changeImageEvent() {
 
 function doParse() {
 
-    var hotspots = parsePointsFile($('#pointsAreaId').val());
+    hotspots = parsePointsFile($('#pointsAreaId').val());
     $('#hotspotList').empty();
     $('#hotspotMapId').empty();
 
@@ -84,6 +100,11 @@ function doParse() {
         addArea('#hotspotMapId', hotspot, scaling);
     }) ;
 
+
+    if (testing) {
+        pickRandomHotspot();
+    }
+
 }
 
 function changePointsEvent() {
@@ -92,7 +113,7 @@ function changePointsEvent() {
     var selectedFile= $('#fileComboboxId').val();
     var pointsFile = dir+selectedFile;
     $('#pointsAreaId').load("maps/"+pointsFile,  doParse);
-    $('#hotspotFoundId').html("");
+ //   $('#hotspotFoundId').html("");
 
 
 
@@ -133,11 +154,37 @@ function begin() {
 
     loadImageMapping();
     fillFileComboBox( );
+}
 
+function toggleTesting() {
+    if (!testing) {
+        testing = true;
+        $('#mapTypeNormal').attr("checked", false);
+        $('#toggleTestButtonId').html("Browse");
+        $('#whereisId').html("Where is...");
+        $('#clickedOnId').html("");
+    } else {
+        testing = false;
+        $('#mapTypeNormal').attr("checked", true);
+        $('#toggleTestButtonId').html("Test");
+        $('#whereisId').html("Hovering on ...");
+        $('#hotspotFoundId').html("");
+        $('#clickedOnId').html("");
+    }
+    loadImageMapping();
+}
 
+function pickRandomHotspot() {
+    $('#clickedOnId').html("");
+    var randomIndex = Math.floor(Math.random()*hotspots.length);
+    var findHotSpot = hotspots[randomIndex];
+    var hotspotName = findHotSpot.hotspotName;
 
+    $('#hotspotFoundId').html(hotspotName);
 
 }
+
+
 
 function loadimage(imagePathArg) {
     var imagePath = './maps/'+imagePathArg;
