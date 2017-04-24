@@ -11,10 +11,14 @@
 var actualPoints = [];
 var testing = false;
 var hotspots = [];
+var fileIndex = 0;
 
-function addOption(id, value) {
+function addOption(id, value, selected) {
     var option = $('<option />');
     option.attr('value', value).text(value);
+    if (selected) {
+        option.attr('selected', true)
+    }
     $(id).append(option);
 }
 
@@ -71,12 +75,14 @@ function loadImageMapping() {
 }
 
 function changeImageEvent() {
+    rememberIndexEvent();
     $('#hotspotFoundId').html("");
     loadImageMapping();
 }
 
 
 function doParse() {
+
 
     hotspots = parsePointsFile($('#pointsAreaId').val());
     $('#hotspotList').empty();
@@ -100,14 +106,15 @@ function doParse() {
         addArea('#hotspotMapId', hotspot, scaling);
     }) ;
 
-
     if (testing) {
         pickRandomHotspot();
     }
 
 }
 
+
 function changePointsEvent() {
+
     var selectedMap= $('#mapComboboxId').val();
     var dir = imageFileMapping[selectedMap].dir;
     var selectedFile= $('#fileComboboxId').val();
@@ -115,8 +122,21 @@ function changePointsEvent() {
     $('#pointsAreaId').load("maps/"+pointsFile,  doParse);
  //   $('#hotspotFoundId').html("");
 
+}
+
+function rememberIndexEvent() {
+    fileIndex = $("#fileComboboxId option:selected").index();
+}
 
 
+function retrieveIndexEvent() {
+    var fileSize = $('#fileComboboxId option').size()
+
+    if (fileIndex < fileSize) {
+        $('#fileComboboxId option')[fileIndex].selected
+    } else {
+        $('#fileComboboxId option')[fileSize - 1].selected
+    }
 }
 
 function fillFileComboBox() {
@@ -125,10 +145,17 @@ function fillFileComboBox() {
 
 
     var hotspotFiles = hotspotFileMapping[selectedMap];
+
+    if (fileIndex >= hotspotFiles.length) {
+        fileIndex = hotspotFiles.length-1
+    }
+
     $.each( hotspotFiles, function(index, value) {
-            addOption('#fileComboboxId', value);
+            addOption('#fileComboboxId', value, fileIndex == index);
         }
     )
+
+
 
     $('#fileComboboxId').change(changePointsEvent );
     changePointsEvent();
