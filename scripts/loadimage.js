@@ -88,7 +88,7 @@ function doParse() {
     $('#hotspotList').empty();
     $('#hotspotMapId').empty();
 
-    var winWidth = $(window).width()-250;
+    var winWidth = $(window).width()-50;
     var selectedMap= $('#mapComboboxId').val();
 
     var imgWidth = imageFileMapping[selectedMap].width;

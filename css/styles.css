@@ -3,7 +3,71 @@ body {
     font-size:x-large;
 }
 
+.hotspotFoundClass {
+    position: fixed;
+    left: 150px;
+    top: 20px;
+}
 
+
+.clickedOnClass {
+    position: fixed;
+    left: 50px;
+    top: 20px;
+}
+
+
+.whereisClass {
+    position: fixed;
+    left: 50px;
+    top: 20px;
+}
+
+.mapComboboxClass {
+    position: absolute;
+    left: 320px;
+    top: 20px;
+    font-size: medium;
+}
+
+.mapTypeNormalClass {
+    position: absolute;
+    left: 500px;
+    top: 20px;
+    font-size: small;
+}
+
+.fileComboboxClass {
+    position: absolute;
+    left: 600px;
+    top: 20px;
+    font-size: medium;
+
+}
+
+.hotspotListClass {
+    position: absolute;
+    left: 700px;
+    top: 20px;
+    font-size: medium;
+
+}
+
+.toggleTestButtonClass {
+    position: absolute;
+    left: 850px;
+    top: 20px;
+    font-size: medium;
+
+}
+
+.paragraphMapClass {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    font-size: medium;
+
+}
 .large {
     font-size: medium;
 }
@@ -15,7 +79,6 @@ body {
 
 .leftmargin {
     font-size:medium;
-
 }
 
 
