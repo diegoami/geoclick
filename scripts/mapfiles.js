@@ -15,7 +15,7 @@ var imageFileMapping = {
     "Belgium" : { dir : "Europe/Belgium/", imgComp : "belgio.jpg", imgEmpty : "belgim.jpg", width : 1002} ,
     "CzechRepublic" : { dir : "Europe/CzechRepublic/", imgComp : "CzechRepublic.jpg", imgEmpty : "CzechRepublim.jpg", width : 1381} ,
     "Denmark" : { dir : "Europe/Denmark/", imgComp : "Denmark.jpg", imgEmpty : "Denmarm.jpg", width : 1406} ,
-    "Finland" : { dir : "Europe/Finland/", imgComp : "Finland.jpg", imgEmpty : "Finlandm.jpg", width : 980} ,
+    "Finland" : { dir : "Europe/Finland/", imgComp : "Finland.jpg", imgEmpty : "Finlanm.jpg", width : 980} ,
     "France" : { dir : "Europe/France/", imgComp : "France.jpg", imgEmpty : "Francm.jpg",width : 930} ,
     "Germany" : { dir : "Europe/Germany/", imgComp : "Germany.jpg", imgEmpty : "Germanm.jpg", width : 1309} ,
     "Greece" : { dir : "Europe/Greece/", imgComp : "greece.jpg", imgEmpty : "greecm.jpg", width : 1098} ,
