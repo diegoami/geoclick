@@ -64,11 +64,12 @@ function getImagePath(selectedMap) {
 
 function loadImageMapping() {
     //  $('#paragraphMapId').remove('#mapImageId');
+
     $('#mapImageId').remove();
     var selectedMap= $('#mapComboboxId').val();
     var selectedImg =   getImagePath(selectedMap);
 
-    var mapImageId = $('<img style="float : left; "   id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
+    var mapImageId = $('<img  id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
     $('#paragraphMapId').append(mapImageId);
 
 
@@ -184,6 +185,7 @@ function begin() {
 }
 
 function toggleTesting() {
+    rememberIndexEvent();
     if (!testing) {
         testing = true;
         $('#mapTypeNormal').attr("checked", false);

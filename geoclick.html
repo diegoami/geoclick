@@ -14,22 +14,23 @@
 
 </head>
 <body onresize="doParse();">
-<div>
-<div class="hotspotFoundClass" id="hotspotFoundId"></div>
-<div class="clickedOnClass" id="clickedOnId"></div>
-<div class="mapComboboxClass"><select id="mapComboboxId"></select></div>
-<div class="mapTypeNormalClass"><input id="mapTypeNormal" type="checkbox" name="mapType" value="normal" checked>Normal</div>
-<div class="fileComboboxClass"><select id="fileComboboxId"></select></div>
-<div class="hotspotListClass" ><select  id="hotspotList"></select></div>
-<div class="toggleTestButtonClass"><button id="toggleTestButton" onclick="toggleTesting();">Test</button></div>
-<div class="whereisClass"><span id="whereisId"  style="display:none;"></span></div>
+<div class="selectionClass">
+    <div class="menubarClass" ><select id="mapComboboxId"></select></div>
+    <div class="menubarClass" ><input id="mapTypeNormal" type="checkbox" name="mapType" value="normal" checked>Normal</div>
+    <div class="menubarClass" ><select id="fileComboboxId"></select></div>
+    <div class="menubarClass" ><select  id="hotspotList"></select></div>
+    <div class="menubarClass"><button id="toggleTestButton" onclick="toggleTesting();">Test</button></div>
+    <div class="menubarClass" id="hotspotFoundId"></div>
+    <div class="menubarClass" ><span id="whereisId"  style="display:none;"></span></div>
+    <div class="menubarClass" id="clickedOnId"></div>
+
 </div>
 <div id="paragraphMapId" class="paragraphMapClass">
     <img  id="mapImageId" onload="fillFileComboBox();" src="" usemap="#hotspotMap">
-<map id="hotspotMapId"  name="hotspotMap">
 
-</map>
 </div>
+<map id="hotspotMapId"  name="hotspotMap">
+</map>
 <div class="spanMapId">
 </div>
 
