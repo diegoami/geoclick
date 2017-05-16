@@ -41,6 +41,33 @@ HotSpot.prototype.getShape = function() {
 }
 
 
+HotSpot.prototype.getCenter = function(scaling) {
+    var xmax=0, ymax = 0, xmin = 10000000, ymin = 10000000;
+    thl = this.hotspots.length;
+    for(var i=0; i < thl; i++){
+        var c = this.hotspots[i].split(',');
+        if (c[0] > xmax) {
+            xmax= Number(c[0])
+        }
+        if (c[0] < xmin) {
+            xmin= Number(c[0])
+        }
+        if (c[1] > ymax) {
+            ymax= Number(c[1])
+        }
+        if (c[1] < ymin) {
+            ymin= Number(c[1])
+        }
+
+    }
+    var xres = xmin + (xmax-xmin)/2
+    var yres = ymin + (ymax-ymin)/2
+    var rlist = [xres,yres]
+    return rlist
+}
+
+
+
 HotSpot.prototype.getCoords = function(scaling) {
     if (scaling != 1) {
         for (var i = 0 ; i < this.hotspots.length; i++) {
@@ -74,7 +101,7 @@ HotSpot.prototype.getCoords = function(scaling) {
 //HotSpot.hotPointRegExp = /([\d]+)([\w]+)\=([\d\-]+);([\d,]+)/g;
 
 function parsePointsFile(pointsFile) {
-    hotspots = [];
+    var hotspots = [];
     var pointLines = pointsFile .split("\n");
     $.each(pointLines, function(index, value) {
         var hotspot = new HotSpot(value);
@@ -87,4 +114,12 @@ function parsePointsFile(pointsFile) {
     return hotspots;
 
 
+}
+
+function findHotspot(hotspotName) {
+    for (var i = 0 ; i < hotspots.length; i++) {
+        if (hotspots[i].hotspotName == hotspotName) {
+            return hotspots[i];
+        }
+    }
 }

@@ -43,3 +43,9 @@ body {
 
 }
 
+.marker {
+    z-index:2;
+    position:absolute;
+    top: 50px;
+    left: 0px;
+}

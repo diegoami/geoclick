@@ -10,8 +10,9 @@
 
 var actualPoints = [];
 var testing = false;
-var hotspots = [];
+
 var fileIndex = 0;
+var scaling = 1;
 
 function addOption(id, value, selected) {
     var option = $('<option />');
@@ -64,14 +65,11 @@ function getImagePath(selectedMap) {
 
 function loadImageMapping() {
     //  $('#paragraphMapId').remove('#mapImageId');
-
     $('#mapImageId').remove();
     var selectedMap= $('#mapComboboxId').val();
     var selectedImg =   getImagePath(selectedMap);
-
     var mapImageId = $('<img  id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
     $('#paragraphMapId').append(mapImageId);
-
 
 }
 
@@ -83,8 +81,6 @@ function changeImageEvent() {
 
 
 function doParse() {
-
-
     hotspots = parsePointsFile($('#pointsAreaId').val());
     $('#hotspotList').empty();
     $('#hotspotMapId').empty();
@@ -94,25 +90,31 @@ function doParse() {
 
     var imgWidth = imageFileMapping[selectedMap].width;
 
-
-    var scaling = winWidth > imgWidth ? 1 : winWidth / imgWidth ;
+    scaling = winWidth > imgWidth ? 1 : winWidth / imgWidth ;
     if (imgWidth > winWidth ) {
         $('#mapImageId').attr('width', Math.min(imgWidth, winWidth));
     }
-
-
 
     $.each(hotspots, function(index, hotspot) {
         addOption('#hotspotList', hotspot.hotspotName);
         addArea('#hotspotMapId', hotspot, scaling);
     }) ;
-
+    $('#hotspotList').change(moveMarker);
     if (testing) {
         pickRandomHotspot();
     }
 
 }
 
+
+function moveMarker() {
+    var hotspotKey = $('#hotspotList').val();
+    var hotspot = findHotspot(hotspotKey);
+    var cc= hotspot.getCenter(scaling);
+    $('#marker').css("top",cc[1]-60*scaling-$('#paragraphMapId').scrollTop())
+    $('#marker').css("left",cc[0]-60*scaling)
+
+}
 
 function changePointsEvent() {
 
@@ -156,12 +158,8 @@ function fillFileComboBox() {
         }
     )
 
-
-
     $('#fileComboboxId').change(changePointsEvent );
     changePointsEvent();
-
-
 
 }
 
@@ -179,7 +177,6 @@ function fillMapComboBox() {
 function begin() {
     var firstKey = Object.keys(imageFileMapping)[0];
     fillMapComboBox();
-
     loadImageMapping();
     fillFileComboBox( );
 }
@@ -208,12 +205,8 @@ function pickRandomHotspot() {
     var randomIndex = Math.floor(Math.random()*hotspots.length);
     var findHotSpot = hotspots[randomIndex];
     var hotspotName = findHotSpot.hotspotName;
-
     $('#hotspotFoundId').html(hotspotName);
-
 }
-
-
 
 function loadimage(imagePathArg) {
     var imagePath = './maps/'+imagePathArg;
