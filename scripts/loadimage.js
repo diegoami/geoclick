@@ -36,6 +36,7 @@ function addArea(id, hotspot, scaling) {
         }
     });
     area.mousedown(function() {
+        $('#marker').css("visibility","hidden")
         if (testing) {
             $('#clickedOnId').html($(this).attr('alt'));
             if ($(this).attr('alt') ===  $('#hotspotFoundId').html() ) {
@@ -99,6 +100,7 @@ function doParse() {
         addOption('#hotspotList', hotspot.hotspotName);
         addArea('#hotspotMapId', hotspot, scaling);
     }) ;
+    $('#marker').css("visibility","hidden")
     $('#hotspotList').change(moveMarker);
     if (testing) {
         pickRandomHotspot();
@@ -113,6 +115,12 @@ function moveMarker() {
     var cc= hotspot.getCenter(scaling);
     $('#marker').css("top",cc[1]-60*scaling-$('#paragraphMapId').scrollTop())
     $('#marker').css("left",cc[0]-60*scaling)
+    $('#marker').css("visibility","visible")
+    if (testing) {
+        if (hotspotKey ===  $('#hotspotFoundId').html() )
+            pickRandomHotspot();
+    }
+
 
 }
 

@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19902c1f-be86-4b38-8391-2cec708b3a97" name="Default" comment="Added marker">
+    <list default="true" id="19902c1f-be86-4b38-8391-2cec708b3a97" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geoclick.html" afterPath="$PROJECT_DIR$/geoclick.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jquery.imagemapster.js" afterPath="$PROJECT_DIR$/scripts/jquery.imagemapster.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/loadimage.js" afterPath="$PROJECT_DIR$/scripts/loadimage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/parse.js" afterPath="$PROJECT_DIR$/scripts/parse.js" />
     </list>
     <ignored path="geoclick.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,14 +23,14 @@
     <favorites_list name="geoclick" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.654504">
+    <splitter split-orientation="vertical" split-proportion="0.3072747">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="geoclick.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="geoclick.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/geoclick.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+                <state relative-caret-position="25">
+                  <caret line="24" column="88" lean-forward="true" selection-start-line="24" selection-start-column="88" selection-end-line="24" selection-end-column="88" />
                   <folding>
                     <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#textarea#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -43,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="170">
-                  <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+                  <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -60,7 +56,7 @@
           <file leaf-file-name="mapfiles.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/mapfiles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-256">
+                <state relative-caret-position="119">
                   <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
                   <folding />
                 </state>
@@ -70,8 +66,8 @@
           <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="23" selection-end-column="19" />
+                <state relative-caret-position="468">
+                  <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -80,8 +76,8 @@
           <file leaf-file-name="loadimage.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scripts/loadimage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
-                  <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+                <state relative-caret-position="347">
+                  <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -90,8 +86,8 @@
           <file leaf-file-name="parse.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/parse.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-569">
-                  <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+                <state relative-caret-position="935">
+                  <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -100,7 +96,7 @@
           <file leaf-file-name="countries.hsf" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/maps/Africa/countries.hsf">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-102">
+                <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
@@ -140,7 +136,7 @@
           <file leaf-file-name="jquery.imagemapster.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/jquery.imagemapster.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="277">
+                <state relative-caret-position="14127">
                   <caret line="841" column="11" lean-forward="false" selection-start-line="841" selection-start-column="11" selection-end-line="841" selection-end-column="11" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -152,7 +148,7 @@
           <file leaf-file-name="jquery-1.8.2.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/jquery-1.8.2.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-595">
+                <state relative-caret-position="125732">
                   <caret line="7408" column="0" lean-forward="false" selection-start-line="7408" selection-start-column="0" selection-end-line="7408" selection-end-column="0" />
                   <folding />
                 </state>
@@ -165,8 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;rivers.hsf&quot;, &quot;towns.hsf&quot;</find>
-      <find>pa</find>
       <find>para</find>
       <find>paraga</find>
       <find>parag</find>
@@ -191,10 +185,12 @@
       <find>scaling</find>
       <find>hotspots</find>
       <find>style</find>
-      <find>hotspots</find>
       <find>61</find>
       <find>alert</find>
       <find>fileComboboxId</find>
+      <find>mouseDow</find>
+      <find>pickRandomHotspot</find>
+      <find>testing</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;towns.hsf&quot;, &quot;rivers.hsf&quot;</replace>
@@ -214,11 +210,11 @@
         <option value="$PROJECT_DIR$/scripts/mapfiles.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/scripts/jquery.imagemapster.js" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/scripts/parse.js" />
-        <option value="$PROJECT_DIR$/scripts/loadimage.js" />
-        <option value="$PROJECT_DIR$/geoclick.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/geoclick.html" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/scripts/loadimage.js" />
       </list>
     </option>
   </component>
@@ -252,8 +248,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -485,7 +481,8 @@
       <workItem from="1493468645720" duration="10094000" />
       <workItem from="1493499406993" duration="1204000" />
       <workItem from="1493589400865" duration="90000" />
-      <workItem from="1494967322776" duration="8545000" />
+      <workItem from="1494967322776" duration="9836000" />
+      <workItem from="1495058300705" duration="1361000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;Test&quot; mode">
       <created>1354473892594</created>
@@ -501,27 +498,41 @@
       <option name="project" value="LOCAL" />
       <updated>1493493048770</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added marker">
+      <created>1494976007766</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1494976007766</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Javascript libraries version triggered">
+      <created>1494977182659</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1494977182659</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29474000" />
+    <option name="totallyTimeSpent" value="32126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.259375" sideWeight="0.512945" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.259375" sideWeight="0.5081433" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09229099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.259375" sideWeight="0.487055" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09229099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.259375" sideWeight="0.49185666" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04777416" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04777416" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -549,14 +560,15 @@
     <MESSAGE value="Added &quot;Test&quot; mode" />
     <MESSAGE value="Changed layout" />
     <MESSAGE value="Added marker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added marker" />
+    <MESSAGE value="Javascript libraries version triggered" />
+    <option name="LAST_COMMIT_MESSAGE" value="Javascript libraries version triggered" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/scripts/loadimage.js</url>
-          <line>66</line>
+          <line>67</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -839,7 +851,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery.imagemapster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
+        <state relative-caret-position="14127">
           <caret line="841" column="11" lean-forward="false" selection-start-line="841" selection-start-column="11" selection-end-line="841" selection-end-column="11" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -849,7 +861,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery-1.8.2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
+        <state relative-caret-position="125732">
           <caret line="7408" column="0" lean-forward="false" selection-start-line="7408" selection-start-column="0" selection-end-line="7408" selection-end-column="0" />
           <folding />
         </state>
@@ -857,7 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/mapfiles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256">
+        <state relative-caret-position="119">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
         </state>
@@ -881,32 +893,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/maps/Africa/countries.hsf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/parse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-569">
-          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="935">
+          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geoclick.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        <state relative-caret-position="25">
+          <caret line="24" column="88" lean-forward="true" selection-start-line="24" selection-start-column="88" selection-end-line="24" selection-end-column="88" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -914,18 +934,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/loadimage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="347">
+          <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
           <folding />
         </state>
       </provider>
