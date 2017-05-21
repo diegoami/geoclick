@@ -1,29 +1,13 @@
-/**
- * Created with JetBrains WebStorm.
- * User: diego
- * Date: 07.10.12
- * Time: 10:02
- * To change this template use File | Settings | File Templates.
- */
 
 
 
 var hotSpotList = new HotSpotList();
-var marker = new Marker('#marker')
+var marker = new Marker('#marker');
+var mapComboboxId = new MapComboboxId('#mapComboboxId')
 
 var testing = false;
-
 var fileIndex = 0;
 var scaling = 1;
-
-function addOption(id, value, selected) {
-    var option = $('<option />');
-    option.attr('value', value).text(value);
-    if (selected) {
-        option.attr('selected', true)
-    }
-    $(id).append(option);
-}
 
 function addArea(id, hotspot, scaling) {
     var area = $('<area/>');
@@ -32,13 +16,18 @@ function addArea(id, hotspot, scaling) {
     area.attr('shape', hotspot.getShape());
     var coords = hotspot.getCoords(scaling);
     area.attr('coords', coords);
+    $(id).append(area);
+    return area;
+}
+
+function addEventsToArea(area)  {
     area.mouseover( function() {
         if (!testing) {
             $('#hotspotFoundId').html($(this).attr('alt'));
         }
     });
     area.mousedown(function() {
-        $('#marker').css("visibility","hidden")
+        marker.hide()
         if (testing) {
             $('#clickedOnId').html($(this).attr('alt'));
             if ($(this).attr('alt') ===  $('#hotspotFoundId').html() ) {
@@ -52,7 +41,7 @@ function addArea(id, hotspot, scaling) {
             $('#hotspotFoundId').html("");
         }
     });
-    $(id).append(area);
+
 }
 
 function getImagePath(selectedMap) {
@@ -88,9 +77,7 @@ function doParse() {
     $('#hotspotMapId').empty();
 
     var winWidth = $(window).width()-50;
-    var selectedMap= $('#mapComboboxId').val();
-
-    var imgWidth = imageFileMapping[selectedMap].width;
+    var imgWidth = imageFileMapping[mapComboboxId.selectedMap()].width;
 
     scaling = winWidth > imgWidth ? 1 : winWidth / imgWidth ;
     if (imgWidth > winWidth ) {
@@ -99,9 +86,10 @@ function doParse() {
 
     $.each(hotSpotList.hotspots, function(index, hotspot) {
         addOption('#hotspotList', hotspot.hotspotName);
-        addArea('#hotspotMapId', hotspot, scaling);
+        area = addArea('#hotspotMapId', hotspot, scaling);
+        addEventsToArea(area);
     }) ;
-    $('#marker').css("visibility","hidden")
+    marker.hide();
     $('#hotspotList').change(moveMarker);
     if (testing) {
         pickRandomHotspot();
@@ -114,32 +102,24 @@ function moveMarker() {
     var hotspotKey = $('#hotspotList').val();
     var hotspot = hotSpotList.findHotspot(hotspotKey);
     var cc= hotspot.getCenter(scaling);
-    $('#marker').css("top",cc[1]-60*scaling-$('#paragraphMapId').scrollTop())
-    $('#marker').css("left",cc[0]-60*scaling)
-    $('#marker').css("visibility","visible")
+    marker.moveTo(cc[0]-60*scaling, cc[1]-60*scaling-$('#paragraphMapId').scrollTop());
+    marker.show();
     if (testing) {
         if (hotspotKey ===  $('#hotspotFoundId').html() )
             pickRandomHotspot();
     }
-
-
 }
 
 function changePointsEvent() {
-
-    var selectedMap= $('#mapComboboxId').val();
-    var dir = imageFileMapping[selectedMap].dir;
+    var dir = imageFileMapping[mapComboboxId.selectedMap()].dir;
     var selectedFile= $('#fileComboboxId').val();
     var pointsFile = dir+selectedFile;
     $('#pointsAreaId').load("maps/"+pointsFile,  doParse);
- //   $('#hotspotFoundId').html("");
-
 }
 
 function rememberIndexEvent() {
     fileIndex = $("#fileComboboxId option:selected").index();
 }
-
 
 function retrieveIndexEvent() {
     var fileSize = $('#fileComboboxId option').size()
@@ -152,11 +132,10 @@ function retrieveIndexEvent() {
 }
 
 function fillFileComboBox() {
-    var selectedMap = $('#mapComboboxId').val();
+
     $('#fileComboboxId').empty();
 
-
-    var hotspotFiles = hotspotFileMapping[selectedMap];
+    var hotspotFiles = hotspotFileMapping[mapComboboxId.selectedMap()];
 
     if (fileIndex >= hotspotFiles.length) {
         fileIndex = hotspotFiles.length-1
@@ -172,20 +151,10 @@ function fillFileComboBox() {
 
 }
 
-
-function fillMapComboBox() {
-    var imageFileKeys = Object.keys(imageFileMapping );
-    $.each( imageFileKeys, function(index, value) {
-            addOption($('#mapComboboxId'), value);
-        }
-    )
-    $('#mapComboboxId').change( changeImageEvent);
-    $('#mapTypeNormal').click(changeImageEvent);
-}
-
 function begin() {
-    var firstKey = Object.keys(imageFileMapping)[0];
-    fillMapComboBox();
+    mapComboboxId.fill(Object.keys(imageFileMapping ));
+    mapComboboxId.change( changeImageEvent);
+    $('#mapTypeNormal').click(changeImageEvent);
     loadImageMapping();
     fillFileComboBox( );
 }
