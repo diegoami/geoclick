@@ -8,7 +8,9 @@
 
 
 
-var actualPoints = [];
+var hotSpotList = new HotSpotList();
+var marker = new Marker('#marker')
+
 var testing = false;
 
 var fileIndex = 0;
@@ -59,8 +61,7 @@ function getImagePath(selectedMap) {
         imageFileMapping[selectedMap].imgComp :
         imageFileMapping[selectedMap].imgEmpty;
 
-    var imagePath = './maps/'+dir + fileName;
-    return imagePath;
+    return './maps/'+dir + fileName;;
 }
 
 
@@ -82,7 +83,7 @@ function changeImageEvent() {
 
 
 function doParse() {
-    hotspots = parsePointsFile($('#pointsAreaId').val());
+    hotSpotList.parsePointsFile($('#pointsAreaId').val());
     $('#hotspotList').empty();
     $('#hotspotMapId').empty();
 
@@ -96,7 +97,7 @@ function doParse() {
         $('#mapImageId').attr('width', Math.min(imgWidth, winWidth));
     }
 
-    $.each(hotspots, function(index, hotspot) {
+    $.each(hotSpotList.hotspots, function(index, hotspot) {
         addOption('#hotspotList', hotspot.hotspotName);
         addArea('#hotspotMapId', hotspot, scaling);
     }) ;
@@ -111,7 +112,7 @@ function doParse() {
 
 function moveMarker() {
     var hotspotKey = $('#hotspotList').val();
-    var hotspot = findHotspot(hotspotKey);
+    var hotspot = hotSpotList.findHotspot(hotspotKey);
     var cc= hotspot.getCenter(scaling);
     $('#marker').css("top",cc[1]-60*scaling-$('#paragraphMapId').scrollTop())
     $('#marker').css("left",cc[0]-60*scaling)

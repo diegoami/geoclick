@@ -8,7 +8,6 @@
 
 
 
-var hotspots = [];
 
 function HotSpot(lineHotSpot) {
     var pointRegExp = /([\w\.]+)\/([\w\s\'\d\-]+)\=([\d\-]+);([\d,;]+);/;
@@ -98,28 +97,5 @@ HotSpot.prototype.getCoords = function(scaling) {
     }
 }
 
-//HotSpot.hotPointRegExp = /([\d]+)([\w]+)\=([\d\-]+);([\d,]+)/g;
-
-function parsePointsFile(pointsFile) {
-    var hotspots = [];
-    var pointLines = pointsFile .split("\n");
-    $.each(pointLines, function(index, value) {
-        var hotspot = new HotSpot(value);
-        if (hotspot.isDefined()) {
-            hotspots.push(hotspot);
-        } else {
-           // alert("Could not parse : "+$(this));
-        }
-    });
-    return hotspots;
 
 
-}
-
-function findHotspot(hotspotName) {
-    for (var i = 0 ; i < hotspots.length; i++) {
-        if (hotspots[i].hotspotName == hotspotName) {
-            return hotspots[i];
-        }
-    }
-}
