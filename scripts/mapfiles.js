@@ -35,6 +35,16 @@ MapManager.prototype.getHotspots = function() {
     return hotspotFileMapping[this.selectedId];
 }
 
+MapManager.prototype.getImagePath = function(selectedMap, normal) {
+    var dir = imageFileMapping[this.selectedId].dir;
+    var fileName = normal ?
+        imageFileMapping[this.selectedId].imgComp :
+        imageFileMapping[this.selectedId].imgEmpty;
+
+    return './maps/'+dir + fileName;;
+}
+
+
 
 var imageFileMapping = {
     "Africa" : { dir : "Africa/", imgComp : "Africa.jpg", imgEmpty : "Africm.jpg",width : 1038} ,
@@ -103,11 +113,3 @@ var hotspotFileMapping = {
     "Brazil" : ["regions.hsf", "towns.hsf", "rivers.hsf", ]
 }
 
-function getImagePath(selectedMap, normal) {
-    var dir = imageFileMapping[selectedMap].dir;
-    var fileName = normal ?
-        imageFileMapping[selectedMap].imgComp :
-        imageFileMapping[selectedMap].imgEmpty;
-
-    return './maps/'+dir + fileName;;
-}

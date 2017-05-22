@@ -26,8 +26,8 @@ body {
 }
 .pointsAreaId {
     font-size: medium;
-    z-index:5;
-    top: 2000px;
+    z-index:-1;
+    top: 0px;
     visibility: hidden;
 }
 

@@ -5,7 +5,8 @@ var hotSpotList = new HotSpotList();
 var marker = new Marker('#marker');
 var mapComboboxId = new MapComboboxId('#mapComboboxId')
 var mapManager    = new MapManager();
-var testing = false;
+var testManager   = new TestManager();
+
 var fileIndex = 0;
 
 
@@ -22,26 +23,15 @@ function addArea(id, hotspot, scaling) {
 
 function addEventsToArea(area)  {
     area.mouseover( function() {
-        if (!testing) {
-            $('#hotspotFoundId').html($(this).attr('alt'));
-        }
+        $('#hotspotFoundId').html($(this).attr('alt'));
     });
     area.mousedown(function() {
-        marker.hide()
-        if (testing) {
-            $('#clickedOnId').html($(this).attr('alt'));
-            if ($(this).attr('alt') ===  $('#hotspotFoundId').html() ) {
-                $('#hotspotFoundId').html("OK!!!");
-                window.setTimeout(pickRandomHotspot, 1000);
-            }
-        }
+        marker.hide();
     });
     area.mouseleave(function() {
-        if (!testing) {
-            $('#hotspotFoundId').html("");
-        }
+        $('#hotspotFoundId').html("");
     });
-
+    testManager.addEventsForArea(area);
 }
 
 function loadImageMapping() {
@@ -49,7 +39,7 @@ function loadImageMapping() {
 
     var selectedMap= $('#mapComboboxId').val();
     mapManager.selectMap(selectedMap);
-    var selectedImg =   getImagePath(selectedMap,$('#mapTypeNormal').attr("checked"));
+    var selectedImg =   mapManager.getImagePath(selectedMap,$('#mapTypeNormal').attr("checked"));
     var mapImageId = $('<img  id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
     $('#paragraphMapId').append(mapImageId);
 }
@@ -77,9 +67,9 @@ function doParse() {
     }) ;
     marker.hide();
     $('#hotspotList').change(moveMarker);
-    if (testing) {
-        pickRandomHotspot();
-    }
+
+    testManager.pickRandomHotspot();
+
 
 }
 
@@ -90,10 +80,10 @@ function moveMarker() {
     var cc= hotspot.getCenter(mapManager.scaling);
     marker.moveTo(cc[0]-60*mapManager.scaling, cc[1]-60*mapManager.scaling-$('#paragraphMapId').scrollTop());
     marker.show();
-    if (testing) {
-        if (hotspotKey ===  $('#hotspotFoundId').html() )
-            pickRandomHotspot();
-    }
+
+    if (hotspotKey ===  $('#hotspotFoundId').html() )
+        testManager.pickRandomHotspot();
+
 }
 
 function changePointsEvent() {
@@ -145,29 +135,9 @@ function begin() {
 
 function toggleTesting() {
     rememberIndexEvent();
-    if (!testing) {
-        testing = true;
-        $('#mapTypeNormal').attr("checked", false);
-        $('#toggleTestButtonId').html("Browse");
-        $('#whereisId').html("Where is...");
-        $('#clickedOnId').html("");
-    } else {
-        testing = false;
-        $('#mapTypeNormal').attr("checked", true);
-        $('#toggleTestButtonId').html("Test");
-        $('#whereisId').html("Hovering on ...");
-        $('#hotspotFoundId').html("");
-        $('#clickedOnId').html("");
-    }
+    testManager.toggleTesting();
     loadImageMapping();
 }
 
-function pickRandomHotspot() {
-    $('#clickedOnId').html("");
-    var randomIndex = Math.floor(Math.random()*hotSpotList.hotspots.length);
-    var findHotSpot = hotSpotList.hotspots[randomIndex];
-    var hotspotName = findHotSpot.hotspotName;
-    $('#hotspotFoundId').html(hotspotName);
-}
 
 
