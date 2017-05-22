@@ -4,10 +4,11 @@
 var hotSpotList = new HotSpotList();
 var marker = new Marker('#marker');
 var mapComboboxId = new MapComboboxId('#mapComboboxId')
+var fileComboboxId = new FileComboboxId('#fileComboboxId')
 var mapManager    = new MapManager();
 var testManager   = new TestManager();
 
-var fileIndex = 0;
+
 
 
 function addArea(id, hotspot, scaling) {
@@ -45,7 +46,7 @@ function loadImageMapping() {
 }
 
 function changeImageEvent() {
-    rememberIndexEvent();
+    fileComboboxId.rememberIndex();
     $('#hotspotFoundId').html("");
     loadImageMapping();
 }
@@ -67,10 +68,7 @@ function doParse() {
     }) ;
     marker.hide();
     $('#hotspotList').change(moveMarker);
-
     testManager.pickRandomHotspot();
-
-
 }
 
 
@@ -83,46 +81,16 @@ function moveMarker() {
 
     if (hotspotKey ===  $('#hotspotFoundId').html() )
         testManager.pickRandomHotspot();
-
 }
 
 function changePointsEvent() {
-
-    $('#pointsAreaId').load(mapManager.getPointsFile($('#fileComboboxId').val()),  doParse);
-}
-
-function rememberIndexEvent() {
-    fileIndex = $("#fileComboboxId option:selected").index();
-}
-
-function retrieveIndexEvent() {
-    var fileSize = $('#fileComboboxId option').size()
-
-    if (fileIndex < fileSize) {
-        $('#fileComboboxId option')[fileIndex].selected
-    } else {
-        $('#fileComboboxId option')[fileSize - 1].selected
-    }
+    $('#pointsAreaId').load(mapManager.getPointsFile(fileComboboxId.val()),  doParse);
 }
 
 function fillFileComboBox() {
-
-    $('#fileComboboxId').empty();
-
     var hotspotFiles = mapManager.getHotspots();
-
-    if (fileIndex >= hotspotFiles.length) {
-        fileIndex = hotspotFiles.length-1
-    }
-
-    $.each( hotspotFiles, function(index, value) {
-            addOption('#fileComboboxId', value, fileIndex == index);
-        }
-    )
-
-    $('#fileComboboxId').change(changePointsEvent );
+    fileComboboxId.fill(hotspotFiles);
     changePointsEvent();
-
 }
 
 function begin() {
@@ -134,7 +102,7 @@ function begin() {
 }
 
 function toggleTesting() {
-    rememberIndexEvent();
+    fileComboboxId.rememberIndex();
     testManager.toggleTesting();
     loadImageMapping();
 }
