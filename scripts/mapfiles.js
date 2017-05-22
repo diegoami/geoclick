@@ -1,10 +1,41 @@
-/**
- * Created with JetBrains WebStorm.
- * User: diego
- * Date: 07.10.12
- * Time: 18:35
- * To change this template use File | Settings | File Templates.
- */
+
+
+function MapManager() {
+    this.scaling = 1;
+    this.selectedId = "Africa";
+    this.width = imageFileMapping[this.selectedId].width;
+}
+
+MapManager.prototype.selectMap = function(mapId) {
+
+    this.selectedId  = mapId;
+    this.width = imageFileMapping[this.selectedId].width;
+
+}
+
+MapManager.prototype.scale = function(winWidth) {
+    this.scaling = winWidth > imageFileMapping[this.selectedId].width ? 1 : winWidth / imageFileMapping[this.selectedId].width  ;
+    this.width   = Math.min(winWidth,imageFileMapping[this.selectedId].width );
+}
+
+
+MapManager.prototype.getImgWidth = function() {
+    return this.width;
+}
+
+MapManager.prototype.getPointsFile = function(pointsId) {
+
+
+    var dir = imageFileMapping[this.selectedId].dir;
+    var pointsFile = "maps/"+dir+pointsId;
+    return pointsFile;
+}
+
+MapManager.prototype.getHotspots = function() {
+    return hotspotFileMapping[this.selectedId];
+}
+
+
 var imageFileMapping = {
     "Africa" : { dir : "Africa/", imgComp : "Africa.jpg", imgEmpty : "Africm.jpg",width : 1038} ,
     "Asia" : { dir : "Asia/", imgComp : "Asia.jpg", imgEmpty : "Asim.jpg",width : 1062} ,
@@ -70,4 +101,13 @@ var hotspotFileMapping = {
     "Australia" : ["regions.hsf", "towns.hsf", "rivers.hsf"],
     "South_America" : ["countries.hsf", "rivers.hsf","towns.hsf"] ,
     "Brazil" : ["regions.hsf", "towns.hsf", "rivers.hsf", ]
+}
+
+function getImagePath(selectedMap, normal) {
+    var dir = imageFileMapping[selectedMap].dir;
+    var fileName = normal ?
+        imageFileMapping[selectedMap].imgComp :
+        imageFileMapping[selectedMap].imgEmpty;
+
+    return './maps/'+dir + fileName;;
 }

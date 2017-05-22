@@ -4,10 +4,10 @@
 var hotSpotList = new HotSpotList();
 var marker = new Marker('#marker');
 var mapComboboxId = new MapComboboxId('#mapComboboxId')
-
+var mapManager    = new MapManager();
 var testing = false;
 var fileIndex = 0;
-var scaling = 1;
+
 
 function addArea(id, hotspot, scaling) {
     var area = $('<area/>');
@@ -44,24 +44,14 @@ function addEventsToArea(area)  {
 
 }
 
-function getImagePath(selectedMap) {
-    var dir = imageFileMapping[selectedMap].dir;
-    var fileName = $('#mapTypeNormal').attr("checked") ?
-        imageFileMapping[selectedMap].imgComp :
-        imageFileMapping[selectedMap].imgEmpty;
-
-    return './maps/'+dir + fileName;;
-}
-
-
 function loadImageMapping() {
-    //  $('#paragraphMapId').remove('#mapImageId');
     $('#mapImageId').remove();
+
     var selectedMap= $('#mapComboboxId').val();
-    var selectedImg =   getImagePath(selectedMap);
+    mapManager.selectMap(selectedMap);
+    var selectedImg =   getImagePath(selectedMap,$('#mapTypeNormal').attr("checked"));
     var mapImageId = $('<img  id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
     $('#paragraphMapId').append(mapImageId);
-
 }
 
 function changeImageEvent() {
@@ -70,23 +60,19 @@ function changeImageEvent() {
     loadImageMapping();
 }
 
-
 function doParse() {
     hotSpotList.parsePointsFile($('#pointsAreaId').val());
     $('#hotspotList').empty();
     $('#hotspotMapId').empty();
 
     var winWidth = $(window).width()-50;
-    var imgWidth = imageFileMapping[mapComboboxId.selectedMap()].width;
-
-    scaling = winWidth > imgWidth ? 1 : winWidth / imgWidth ;
-    if (imgWidth > winWidth ) {
-        $('#mapImageId').attr('width', Math.min(imgWidth, winWidth));
-    }
+    mapManager.selectMap(mapComboboxId.selectedMap());
+    mapManager.scale(winWidth);
+    $('#mapImageId').attr('width', Math.min(mapManager.getImgWidth()));
 
     $.each(hotSpotList.hotspots, function(index, hotspot) {
         addOption('#hotspotList', hotspot.hotspotName);
-        area = addArea('#hotspotMapId', hotspot, scaling);
+        area = addArea('#hotspotMapId', hotspot, mapManager.scaling);
         addEventsToArea(area);
     }) ;
     marker.hide();
@@ -101,8 +87,8 @@ function doParse() {
 function moveMarker() {
     var hotspotKey = $('#hotspotList').val();
     var hotspot = hotSpotList.findHotspot(hotspotKey);
-    var cc= hotspot.getCenter(scaling);
-    marker.moveTo(cc[0]-60*scaling, cc[1]-60*scaling-$('#paragraphMapId').scrollTop());
+    var cc= hotspot.getCenter(mapManager.scaling);
+    marker.moveTo(cc[0]-60*mapManager.scaling, cc[1]-60*mapManager.scaling-$('#paragraphMapId').scrollTop());
     marker.show();
     if (testing) {
         if (hotspotKey ===  $('#hotspotFoundId').html() )
@@ -111,10 +97,8 @@ function moveMarker() {
 }
 
 function changePointsEvent() {
-    var dir = imageFileMapping[mapComboboxId.selectedMap()].dir;
-    var selectedFile= $('#fileComboboxId').val();
-    var pointsFile = dir+selectedFile;
-    $('#pointsAreaId').load("maps/"+pointsFile,  doParse);
+
+    $('#pointsAreaId').load(mapManager.getPointsFile($('#fileComboboxId').val()),  doParse);
 }
 
 function rememberIndexEvent() {
@@ -135,7 +119,7 @@ function fillFileComboBox() {
 
     $('#fileComboboxId').empty();
 
-    var hotspotFiles = hotspotFileMapping[mapComboboxId.selectedMap()];
+    var hotspotFiles = mapManager.getHotspots();
 
     if (fileIndex >= hotspotFiles.length) {
         fileIndex = hotspotFiles.length-1
@@ -180,16 +164,10 @@ function toggleTesting() {
 
 function pickRandomHotspot() {
     $('#clickedOnId').html("");
-    var randomIndex = Math.floor(Math.random()*hotspots.length);
-    var findHotSpot = hotspots[randomIndex];
+    var randomIndex = Math.floor(Math.random()*hotSpotList.hotspots.length);
+    var findHotSpot = hotSpotList.hotspots[randomIndex];
     var hotspotName = findHotSpot.hotspotName;
     $('#hotspotFoundId').html(hotspotName);
-}
-
-function loadimage(imagePathArg) {
-    var imagePath = './maps/'+imagePathArg;
-    //$('#mapImageId').load(imagePath)
-
 }
 
 

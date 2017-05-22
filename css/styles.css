@@ -24,8 +24,11 @@ body {
     overflow: auto;
 
 }
-.large {
+.pointsAreaId {
     font-size: medium;
+    z-index:5;
+    top: 2000px;
+    visibility: hidden;
 }
 
 .verylarge {
