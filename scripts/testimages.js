@@ -3,7 +3,7 @@ var marker = new Marker('#marker');
 var mapComboboxId = new MapComboboxId('#mapComboboxId')
 var fileComboboxId = new FileComboboxId('#fileComboboxId')
 var hotspotComboboxId = new HotspotComboboxId('#hotspotComboboxId')
-var mapNormalCheckboxId = new MapNormalCheckboxId('#mapTypeNormal')
+var mapNormalCheckboxId = new MapNormalCheckboxId('#mapTypeNormal',false)
 var mapManager    = new MapManager();
 var testManager   = new TestManager(true);
 var mapUI         = new MapUI('#mapImageId','#paragraphMapId','#hotspotMap','#hotspotMapId'  )
@@ -44,7 +44,7 @@ function doParse() {
     }) ;
     marker.hide();
     hotspotComboboxId.change(moveMarker);
-    testManager.pickRandomHotspot(testManager);
+
 }
 
 function moveMarker() {
@@ -53,8 +53,8 @@ function moveMarker() {
     var ccx = cc[0]-60*mapManager.scaling , ccy = cc[1]-60*mapManager.scaling-mapUI.scrollTop();
     //$("html, body").animate({scrollTop: ccy},0.1, function() { marker.moveTo(ccx, ccy);} );
     //window.scrollBy(0,ccy-mapUI.scrollTop());
-    testManager.pickRandomHotspot(testManager);
     marker.moveRoutine(ccx,ccy);
+    setTimeout(function() {marker.hide()},1000);
 
 
 }
@@ -72,13 +72,31 @@ function fillFileComboBox() {
 
 }
 
+$.urlParam = function(name, url) {
+    if (!url) {
+        url = window.location.href;
+    }
+    var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(url);
+    if (!results) {
+        return undefined;
+    }
+    return results[1] || undefined;
+}
+
 function begin() {
     this.istesting = true;
     mapComboboxId.fill(Object.keys(imageFileMapping ));
     mapComboboxId.change( changeImageEvent);
     mapNormalCheckboxId.click(changeImageEvent);
+    mapNormalCheckboxId.uncheck();
+    mapComboboxId.select($.urlParam('mapComboboxId'));
     loadImageMapping();
     fillFileComboBox( );
+    setTimeout(function() {
+        fileComboboxId.select($.urlParam('fileComboboxId'));
+        changePointsEvent();
+    }, 1000);
+
 
 }
 

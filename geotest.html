@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Geoclick v 0.0.8</title>
+    <title>Geoclick v 0.0.9</title>
     <LINK href="css/styles.css" rel="stylesheet" type="text/css">
 
     <!--    <script src="scripts/jquery-1.8.2.js"></script>-->
@@ -32,15 +32,18 @@
 </head>
 <body onresize="doParse();">
 <div class="selectionClass">
-    <div class="menubarClass" ><select id="mapComboboxId"></select></div>
-    <div class="menubarClass" ><input id="mapTypeNormal" type="checkbox" name="mapType" value="normal" checked>Normal</div>
-    <div class="menubarClass" ><select id="fileComboboxId"></select></div>
-    <div class="menubarClass" ><select  id="hotspotComboboxId"></select></div>
+
+    <div class="menubarClass" ><input id="mapTypeNormal" type="checkbox" name="mapType" value="normal" checked>Cheat</div>
     <div class="menubarClass"><button id="toggleTestButton" onclick="helpMe();">Help</button></div>
     <div class="menubarClass"><button id="startQuizButton" onclick="startQuiz();">Start Quiz</button></div>
     <div class="menubarClass" id="hotspotFoundId"></div>
     <div class="menubarClass" ><span id="whereisId"  style="display:none;"></span></div>
     <div class="menubarClass" id="clickedOnId"></div>
+
+    <div class="menubarClassHidden"><select id="mapComboboxId"></select></div>
+    <div class="menubarClassHidden"><select id="fileComboboxId"></select></div>
+    <div class="menubarClassHidden"><select  id="hotspotComboboxId"></select></div>
+
 
 </div>
 <div id="paragraphMapId" class="paragraphMapClass">

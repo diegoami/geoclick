@@ -16,6 +16,9 @@ function MapComboboxId(id) {
 MapComboboxId.prototype.selectedMap = function() {
     return $(this.id).val();
 }
+MapComboboxId.prototype.select = function(value) {
+    $(this.id).val(value);
+}
 
 MapComboboxId.prototype.change= function(changeFunction) {
     $(this.id).change(changeFunction);
@@ -64,13 +67,23 @@ FileComboboxId.prototype.val = function() {
     return $(this.id).val();
 }
 
-function MapNormalCheckboxId(id) {
+FileComboboxId.prototype.select = function(value) {
+    $(this.id).val(value);
+}
+
+
+function MapNormalCheckboxId(id,checked) {
     this.id = id;
+    $(this.id).prop('checked' , checked);
 }
 
 
 MapNormalCheckboxId.prototype.isactive = function() {
     return $(this.id).prop('checked') ;
+}
+
+MapNormalCheckboxId.prototype.uncheck = function() {
+    $(this.id).prop('checked' , false);
 }
 
 MapNormalCheckboxId.prototype.click= function(changeFunction) {

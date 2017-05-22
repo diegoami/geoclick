@@ -77,7 +77,7 @@ function begin() {
 }
 
 function toggleTesting() {
-    window.open('geotest.html', '_blank');
+    window.open('geotest.html?mapComboboxId='+mapComboboxId.selectedMap()+'&fileComboboxId='+fileComboboxId.val() ,'_blank');
     //$(location).attr('href', 'geotest.html')
 }
 

@@ -34,10 +34,10 @@ Marker.prototype.defaultMarker= function() {
 }
 
 Marker.prototype.moveRoutine= function(ccx,ccy) {
-    if (ccy > 0 && ccy < $(window).height()) {
+    if (ccy > 50 && ccy < $(window).height()-50) {
         this.moveTo(ccx, ccy);
         this.defaultMarker()
-    } else if (ccy > 0 ) {
+    } else if (ccy > 50 ) {
         this.moveTo(ccx, $(window).height() - 200 );
         this.arrowDown();
     } else {
