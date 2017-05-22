@@ -14,10 +14,12 @@ function addArea(id, hotspot, scaling) {
     return area;
 }
 
-function MapUI(mapImageId,paragraphMapId, hotspotMap) {
+function MapUI(mapImageId,paragraphMapId, hotspotMap, hotspotMapId) {
     this.mapImageId = mapImageId;
     this.paragraphMapId = paragraphMapId;
     this.hotspotMap = hotspotMap;
+    this.hotspotMapId = hotspotMapId;
+
 }
 
 MapUI.prototype.loadImage = function(selectedImg){
@@ -28,4 +30,12 @@ MapUI.prototype.loadImage = function(selectedImg){
 
 MapUI.prototype.setWidth= function(width) {
     $(this.mapImageId).attr('width', Math.min(width));
+}
+
+MapUI.prototype.reset = function() {
+    $(this.hotspotMapId).empty();
+}
+
+MapUI.prototype.scrollTop = function() {
+    return $(this.paragraphMapId).scrollTop();
 }

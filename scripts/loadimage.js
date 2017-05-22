@@ -1,24 +1,23 @@
-
-
-
 var hotSpotList = new HotSpotList();
 var marker = new Marker('#marker');
 var mapComboboxId = new MapComboboxId('#mapComboboxId')
 var fileComboboxId = new FileComboboxId('#fileComboboxId')
+var hotspotComboboxId = new HotspotComboboxId('#hotspotComboboxId')
 var mapNormalCheckboxId = new MapNormalCheckboxId('#mapTypeNormal')
 var mapManager    = new MapManager();
 var testManager   = new TestManager();
-var mapUI         = new MapUI('#mapImageId','#paragraphMapId','#hotspotMap' )
+var mapUI         = new MapUI('#mapImageId','#paragraphMapId','#hotspotMap','#hotspotMapId'  )
+var hotspotFoundId         = new HotspotFoundId('#hotspotFoundId')
 
 function addEventsToArea(area)  {
     area.mouseover( function() {
-        $('#hotspotFoundId').html($(this).attr('alt'));
+        hotspotFoundId.setValue($(this).attr('alt'));
     });
     area.mousedown(function() {
         marker.hide();
     });
     area.mouseleave(function() {
-        $('#hotspotFoundId').html("");
+        hotspotFoundId.reset();
     });
     testManager.addEventsForArea(area);
 }
@@ -30,38 +29,35 @@ function loadImageMapping() {
 
 function changeImageEvent() {
     fileComboboxId.rememberIndex();
-    $('#hotspotFoundId').html("");
+    hotspotFoundId.reset();
     loadImageMapping();
 }
 
 function doParse() {
-    hotSpotList.parsePointsFile($('#pointsAreaId').val());
-    $('#hotspotComboboxId').empty();
-    $('#hotspotMapId').empty();
-
+    hotspotComboboxId.reset();
+    mapUI.reset();
     var winWidth = $(window).width()-50;
     mapManager.selectMap(mapComboboxId.selectedMap());
     mapManager.scale(winWidth);
     mapUI.setWidth(mapManager.getImgWidth());
+    hotSpotList.parsePointsFile($('#pointsAreaId').val());
     $.each(hotSpotList.hotspots, function(index, hotspot) {
         addOption('#hotspotComboboxId', hotspot.hotspotName);
-        area = addArea('#hotspotMapId', hotspot, mapManager.scaling);
+        var area = addArea('#hotspotMapId', hotspot, mapManager.scaling);
         addEventsToArea(area);
     }) ;
     marker.hide();
-    $('#hotspotComboboxId').change(moveMarker);
+    hotspotComboboxId.change(moveMarker);
     testManager.pickRandomHotspot();
 }
 
-
 function moveMarker() {
-    var hotspotKey = $('#hotspotComboboxId').val();
-    var hotspot = hotSpotList.findHotspot(hotspotKey);
+    var hotspot = hotSpotList.findHotspot(hotspotComboboxId.val());
     var cc= hotspot.getCenter(mapManager.scaling);
-    marker.moveTo(cc[0]-60*mapManager.scaling, cc[1]-60*mapManager.scaling-$('#paragraphMapId').scrollTop());
+    marker.moveTo(cc[0]-60*mapManager.scaling, cc[1]-60*mapManager.scaling-mapUI.scrollTop());
     marker.show();
 
-    if (hotspotKey ===  $('#hotspotFoundId').html() )
+    if (hotspotComboboxId.val()===  hotspotFoundId.value() )
         testManager.pickRandomHotspot();
 }
 

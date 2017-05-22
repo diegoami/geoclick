@@ -61,24 +61,36 @@ FileComboboxId.prototype.fill = function(hotspotFiles) {
 }
 
 FileComboboxId.prototype.val = function() {
-
     return $(this.id).val();
 }
 
-
 function MapNormalCheckboxId(id) {
     this.id = id;
-
 }
 
 
 MapNormalCheckboxId.prototype.isactive = function() {
     return $(this.id).attr("checked");
-    
 }
-
 
 MapNormalCheckboxId.prototype.click= function(changeFunction) {
     $(this.id).click(changeFunction);
+}
 
+
+function HotspotComboboxId(id) {
+    this.id = id;
+}
+
+
+HotspotComboboxId.prototype.reset = function() {
+    $(this.id).empty();
+}
+
+HotspotComboboxId.prototype.change= function(event) {
+    $(this.id).change(event);
+}
+
+HotspotComboboxId.prototype.val = function() {
+    return $(this.id).val();
 }
