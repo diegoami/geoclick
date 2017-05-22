@@ -55,8 +55,6 @@ function moveMarker() {
     var hotspot = hotSpotList.findHotspot(hotspotComboboxId.val());
     var cc= hotspot.getCenter(mapManager.scaling);
     var ccx = cc[0]-60*mapManager.scaling , ccy = cc[1]-60*mapManager.scaling-mapUI.scrollTop();
-    //$("html, body").animate({scrollTop: ccy},0.1, function() { marker.moveTo(ccx, ccy);} );
-    //window.scrollBy(0,ccy-mapUI.scrollTop());
     if (hotspotComboboxId.val()===  hotspotFoundId.value() )
         testManager.pickRandomHotspot();
     marker.moveRoutine(ccx,ccy);

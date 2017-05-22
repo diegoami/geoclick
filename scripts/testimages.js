@@ -95,7 +95,7 @@ function begin() {
     setTimeout(function() {
         fileComboboxId.select($.urlParam('fileComboboxId'));
         changePointsEvent();
-    }, 1000);
+    }, 2000);
 
 
 }
