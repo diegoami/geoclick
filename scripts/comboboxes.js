@@ -64,3 +64,21 @@ FileComboboxId.prototype.val = function() {
 
     return $(this.id).val();
 }
+
+
+function MapNormalCheckboxId(id) {
+    this.id = id;
+
+}
+
+
+MapNormalCheckboxId.prototype.isactive = function() {
+    return $(this.id).attr("checked");
+    
+}
+
+
+MapNormalCheckboxId.prototype.click= function(changeFunction) {
+    $(this.id).click(changeFunction);
+
+}

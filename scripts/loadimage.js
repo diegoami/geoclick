@@ -5,22 +5,10 @@ var hotSpotList = new HotSpotList();
 var marker = new Marker('#marker');
 var mapComboboxId = new MapComboboxId('#mapComboboxId')
 var fileComboboxId = new FileComboboxId('#fileComboboxId')
+var mapNormalCheckboxId = new MapNormalCheckboxId('#mapTypeNormal')
 var mapManager    = new MapManager();
 var testManager   = new TestManager();
-
-
-
-
-function addArea(id, hotspot, scaling) {
-    var area = $('<area/>');
-    area.attr('alt', hotspot.hotspotName);
-
-    area.attr('shape', hotspot.getShape());
-    var coords = hotspot.getCoords(scaling);
-    area.attr('coords', coords);
-    $(id).append(area);
-    return area;
-}
+var mapUI         = new MapUI('#mapImageId','#paragraphMapId','#hotspotMap' )
 
 function addEventsToArea(area)  {
     area.mouseover( function() {
@@ -36,13 +24,8 @@ function addEventsToArea(area)  {
 }
 
 function loadImageMapping() {
-    $('#mapImageId').remove();
-
-    var selectedMap= $('#mapComboboxId').val();
-    mapManager.selectMap(selectedMap);
-    var selectedImg =   mapManager.getImagePath(selectedMap,$('#mapTypeNormal').attr("checked"));
-    var mapImageId = $('<img  id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="#hotspotMap">');
-    $('#paragraphMapId').append(mapImageId);
+    var selectedImg =   mapManager.getImagePath(mapComboboxId.selectedMap(),mapNormalCheckboxId.isactive());
+    mapUI.loadImage(selectedImg );
 }
 
 function changeImageEvent() {
@@ -53,27 +36,26 @@ function changeImageEvent() {
 
 function doParse() {
     hotSpotList.parsePointsFile($('#pointsAreaId').val());
-    $('#hotspotList').empty();
+    $('#hotspotComboboxId').empty();
     $('#hotspotMapId').empty();
 
     var winWidth = $(window).width()-50;
     mapManager.selectMap(mapComboboxId.selectedMap());
     mapManager.scale(winWidth);
-    $('#mapImageId').attr('width', Math.min(mapManager.getImgWidth()));
-
+    mapUI.setWidth(mapManager.getImgWidth());
     $.each(hotSpotList.hotspots, function(index, hotspot) {
-        addOption('#hotspotList', hotspot.hotspotName);
+        addOption('#hotspotComboboxId', hotspot.hotspotName);
         area = addArea('#hotspotMapId', hotspot, mapManager.scaling);
         addEventsToArea(area);
     }) ;
     marker.hide();
-    $('#hotspotList').change(moveMarker);
+    $('#hotspotComboboxId').change(moveMarker);
     testManager.pickRandomHotspot();
 }
 
 
 function moveMarker() {
-    var hotspotKey = $('#hotspotList').val();
+    var hotspotKey = $('#hotspotComboboxId').val();
     var hotspot = hotSpotList.findHotspot(hotspotKey);
     var cc= hotspot.getCenter(mapManager.scaling);
     marker.moveTo(cc[0]-60*mapManager.scaling, cc[1]-60*mapManager.scaling-$('#paragraphMapId').scrollTop());
@@ -96,7 +78,7 @@ function fillFileComboBox() {
 function begin() {
     mapComboboxId.fill(Object.keys(imageFileMapping ));
     mapComboboxId.change( changeImageEvent);
-    $('#mapTypeNormal').click(changeImageEvent);
+    mapNormalCheckboxId.click(changeImageEvent);
     loadImageMapping();
     fillFileComboBox( );
 }

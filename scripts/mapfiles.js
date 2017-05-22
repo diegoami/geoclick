@@ -35,7 +35,8 @@ MapManager.prototype.getHotspots = function() {
     return hotspotFileMapping[this.selectedId];
 }
 
-MapManager.prototype.getImagePath = function(selectedMap, normal) {
+MapManager.prototype.getImagePath = function(selectedId, normal) {
+    this.selectMap(selectedId);
     var dir = imageFileMapping[this.selectedId].dir;
     var fileName = normal ?
         imageFileMapping[this.selectedId].imgComp :
