@@ -3,8 +3,8 @@
  */
 
 
-function TestManager() {
-    this.istesting = false;
+function TestManager(istesting) {
+    this.istesting = istesting;
 }
 
 TestManager.prototype.addEventsForArea = function(area) {

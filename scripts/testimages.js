@@ -5,20 +5,16 @@ var fileComboboxId = new FileComboboxId('#fileComboboxId')
 var hotspotComboboxId = new HotspotComboboxId('#hotspotComboboxId')
 var mapNormalCheckboxId = new MapNormalCheckboxId('#mapTypeNormal')
 var mapManager    = new MapManager();
-var testManager   = new TestManager(false);
+var testManager   = new TestManager(true);
 var mapUI         = new MapUI('#mapImageId','#paragraphMapId','#hotspotMap','#hotspotMapId'  )
 var hotspotFoundId         = new HotspotFoundId('#hotspotFoundId')
 
 function addEventsToArea(area)  {
-    area.mouseover( function() {
-        hotspotFoundId.setValue($(this).attr('alt'));
-    });
+
     area.mousedown(function() {
         marker.hide();
     });
-    area.mouseleave(function() {
-        hotspotFoundId.reset();
-    });
+
     testManager.addEventsForArea(area);
 }
 
@@ -48,17 +44,16 @@ function doParse() {
     }) ;
     marker.hide();
     hotspotComboboxId.change(moveMarker);
-    testManager.pickRandomHotspot();
+    testManager.pickRandomHotspot(testManager);
 }
 
 function moveMarker() {
-    var hotspot = hotSpotList.findHotspot(hotspotComboboxId.val());
+    var hotspot = hotSpotList.findHotspot(hotspotFoundId.value());
     var cc= hotspot.getCenter(mapManager.scaling);
     var ccx = cc[0]-60*mapManager.scaling , ccy = cc[1]-60*mapManager.scaling-mapUI.scrollTop();
     //$("html, body").animate({scrollTop: ccy},0.1, function() { marker.moveTo(ccx, ccy);} );
     //window.scrollBy(0,ccy-mapUI.scrollTop());
-    if (hotspotComboboxId.val()===  hotspotFoundId.value() )
-        testManager.pickRandomHotspot();
+    testManager.pickRandomHotspot(testManager);
     marker.moveRoutine(ccx,ccy);
 
 
@@ -69,6 +64,7 @@ function changePointsEvent() {
 }
 
 function fillFileComboBox() {
+    this.istesting = true;
     var hotspotFiles = mapManager.getHotspots();
     fileComboboxId.fill(hotspotFiles);
     changePointsEvent();
@@ -77,18 +73,21 @@ function fillFileComboBox() {
 }
 
 function begin() {
+    this.istesting = true;
     mapComboboxId.fill(Object.keys(imageFileMapping ));
     mapComboboxId.change( changeImageEvent);
     mapNormalCheckboxId.click(changeImageEvent);
     loadImageMapping();
     fillFileComboBox( );
+
 }
 
-function toggleTesting() {
-    fileComboboxId.rememberIndex();
-    testManager.toggleTesting();
-    loadImageMapping();
+function helpMe() {
+    moveMarker();
 }
 
+function startQuiz() {
+    testManager.pickRandomHotspot(testManager);
+}
 
 

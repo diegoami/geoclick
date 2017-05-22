@@ -15,3 +15,4 @@ HotspotFoundId.prototype.setValue = function(value) {
 HotspotFoundId.prototype.value= function(value) {
     return $(this.id).html();
 }
+

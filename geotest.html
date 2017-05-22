@@ -25,7 +25,7 @@
     <script src="scripts/ui.js?v=9"></script>
 
     <script src="scripts/tester.js?v=9"></script>
-    <script src="scripts/loadimage.js?v=9"></script>
+    <script src="scripts/testimages.js?v=9"></script>
 
     <script src="scripts/jquery.imagemapster.js"></script>
 
@@ -36,7 +36,8 @@
     <div class="menubarClass" ><input id="mapTypeNormal" type="checkbox" name="mapType" value="normal" checked>Normal</div>
     <div class="menubarClass" ><select id="fileComboboxId"></select></div>
     <div class="menubarClass" ><select  id="hotspotComboboxId"></select></div>
-    <div class="menubarClass"><button id="toggleTestButton" onclick="toggleTesting();">Test</button></div>
+    <div class="menubarClass"><button id="toggleTestButton" onclick="helpMe();">Help</button></div>
+    <div class="menubarClass"><button id="startQuizButton" onclick="startQuiz();">Start Quiz</button></div>
     <div class="menubarClass" id="hotspotFoundId"></div>
     <div class="menubarClass" ><span id="whereisId"  style="display:none;"></span></div>
     <div class="menubarClass" id="clickedOnId"></div>
@@ -53,15 +54,7 @@
 
 
 <img id="marker" class="marker" src="images/marker.png" draggable="true">
-
-
-
-
     <textarea class="pointsAreaId" id="pointsAreaId" cols="10" rows="5" > </textarea>
-
-
-
-
 <script>
     begin();
 </script>

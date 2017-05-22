@@ -22,9 +22,9 @@ function MapUI(mapImageId,paragraphMapId, hotspotMap, hotspotMapId) {
 
 }
 
-MapUI.prototype.loadImage = function(selectedImg){
+MapUI.prototype.loadImage = function(selectedImg, height, width){
     $(this.mapImageId).remove();
-    var mapImageId = $('<img  id="mapImageId" onload="fillFileComboBox();" src="'+selectedImg+'" usemap="' +this.hotspotMap+'">');
+    var mapImageId = $('<img  id="mapImageId" height="'+height+'" width="'+width+'" onload="fillFileComboBox(); " src="'+selectedImg+'" usemap="' +this.hotspotMap+'">');
     $(this.paragraphMapId).append(mapImageId);
 }
 

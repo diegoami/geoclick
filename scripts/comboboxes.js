@@ -70,7 +70,7 @@ function MapNormalCheckboxId(id) {
 
 
 MapNormalCheckboxId.prototype.isactive = function() {
-    return $(this.id).attr("checked");
+    return $(this.id).prop('checked') ;
 }
 
 MapNormalCheckboxId.prototype.click= function(changeFunction) {

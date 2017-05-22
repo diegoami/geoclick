@@ -3,9 +3,9 @@ var marker = new Marker('#marker');
 var mapComboboxId = new MapComboboxId('#mapComboboxId')
 var fileComboboxId = new FileComboboxId('#fileComboboxId')
 var hotspotComboboxId = new HotspotComboboxId('#hotspotComboboxId')
-var mapNormalCheckboxId = new MapNormalCheckboxId('#mapTypeNormal')
+
 var mapManager    = new MapManager();
-var testManager   = new TestManager(false);
+
 var mapUI         = new MapUI('#mapImageId','#paragraphMapId','#hotspotMap','#hotspotMapId'  )
 var hotspotFoundId         = new HotspotFoundId('#hotspotFoundId')
 
@@ -19,11 +19,10 @@ function addEventsToArea(area)  {
     area.mouseleave(function() {
         hotspotFoundId.reset();
     });
-    testManager.addEventsForArea(area);
 }
 
 function loadImageMapping() {
-    var selectedImg =   mapManager.getImagePath(mapComboboxId.selectedMap(),mapNormalCheckboxId.isactive());
+    var selectedImg =   mapManager.getImagePath(mapComboboxId.selectedMap(),true);
     mapUI.loadImage(selectedImg , mapManager.height, mapManager.width);
 }
 
@@ -48,20 +47,14 @@ function doParse() {
     }) ;
     marker.hide();
     hotspotComboboxId.change(moveMarker);
-    testManager.pickRandomHotspot();
+
 }
 
 function moveMarker() {
     var hotspot = hotSpotList.findHotspot(hotspotComboboxId.val());
     var cc= hotspot.getCenter(mapManager.scaling);
     var ccx = cc[0]-60*mapManager.scaling , ccy = cc[1]-60*mapManager.scaling-mapUI.scrollTop();
-    //$("html, body").animate({scrollTop: ccy},0.1, function() { marker.moveTo(ccx, ccy);} );
-    //window.scrollBy(0,ccy-mapUI.scrollTop());
-    if (hotspotComboboxId.val()===  hotspotFoundId.value() )
-        testManager.pickRandomHotspot();
     marker.moveRoutine(ccx,ccy);
-
-
 }
 
 function changePointsEvent() {
@@ -79,15 +72,13 @@ function fillFileComboBox() {
 function begin() {
     mapComboboxId.fill(Object.keys(imageFileMapping ));
     mapComboboxId.change( changeImageEvent);
-    mapNormalCheckboxId.click(changeImageEvent);
     loadImageMapping();
     fillFileComboBox( );
 }
 
 function toggleTesting() {
-    fileComboboxId.rememberIndex();
-    testManager.toggleTesting();
-    loadImageMapping();
+    window.open('geotest.html', '_blank');
+    //$(location).attr('href', 'geotest.html')
 }
 
 
