@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19902c1f-be86-4b38-8391-2cec708b3a97" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/Germany/Germanm.jpg" afterPath="$PROJECT_DIR$/maps/Europe/Germany/Germanm.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/europm.jpg" afterPath="$PROJECT_DIR$/maps/Europe/europm.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Middle_East/Middle_Easm.jpg" afterPath="$PROJECT_DIR$/maps/Middle_East/Middle_Easm.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/North_America/Canada/Canadm.jpg" afterPath="$PROJECT_DIR$/maps/North_America/Canada/Canadm.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/North_America/North_Americm.jpg" afterPath="$PROJECT_DIR$/maps/North_America/North_Americm.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/South_America/Brazil/Brazim.jpg" afterPath="$PROJECT_DIR$/maps/South_America/Brazil/Brazim.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/South_America/South_Americm.jpg" afterPath="$PROJECT_DIR$/maps/South_America/South_Americm.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geobrowse.html" afterPath="$PROJECT_DIR$/geobrowse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geotest.html" afterPath="$PROJECT_DIR$/geotest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Asia/China/towns.hsf" afterPath="$PROJECT_DIR$/maps/Asia/China/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Asia/towns.hsf" afterPath="$PROJECT_DIR$/maps/Asia/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/Austria/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/Austria/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/CzechRepublic/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/CzechRepublic/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/Denmark/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/Denmark/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/France/regions.hsf" afterPath="$PROJECT_DIR$/maps/Europe/France/regions.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/France/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/France/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/Germany/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/Germany/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/Italy/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/Italy/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Europe/Spain/towns.hsf" afterPath="$PROJECT_DIR$/maps/Europe/Spain/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Middle_East/towns.hsf" afterPath="$PROJECT_DIR$/maps/Middle_East/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/North_America/USA/towns.hsf" afterPath="$PROJECT_DIR$/maps/North_America/USA/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/South_America/Brazil/towns.hsf" afterPath="$PROJECT_DIR$/maps/South_America/Brazil/towns.hsf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/testimages.js" afterPath="$PROJECT_DIR$/scripts/testimages.js" />
     </list>
     <ignored path="geoclick.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,13 +46,13 @@
     <favorites_list name="geoclick" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.80998915">
+    <splitter split-orientation="vertical" split-proportion="0.47557002">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="geoclick.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/geoclick.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
+                <state relative-caret-position="-34">
                   <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                   <folding>
                     <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -36,21 +61,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="testimages.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="testimages.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/testimages.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-287">
-                  <caret line="56" column="43" lean-forward="false" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+                <state relative-caret-position="221">
+                  <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="geotest.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="geotest.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/geotest.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="103">
-                  <caret line="29" column="86" lean-forward="false" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -59,7 +84,7 @@
           <file leaf-file-name="towns.hsf" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/maps/North_America/Canada/towns.hsf">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-633">
+                <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
@@ -69,7 +94,7 @@
           <file leaf-file-name="jquery.timer.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/jquery.timer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-459">
+                <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -81,8 +106,8 @@
           <file leaf-file-name="marker.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/marker.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+                <state relative-caret-position="731">
+                  <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -91,7 +116,7 @@
           <file leaf-file-name="hotspotlist.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/hotspotlist.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="59">
+                <state relative-caret-position="204">
                   <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
                   <folding />
                 </state>
@@ -101,7 +126,7 @@
           <file leaf-file-name="comboboxes.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/comboboxes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="292">
+                <state relative-caret-position="1258">
                   <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
                   <folding />
                 </state>
@@ -111,8 +136,8 @@
           <file leaf-file-name="mapui.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/mapui.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-192">
-                  <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+                <state relative-caret-position="272">
+                  <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
                   <folding>
                     <element signature="n#!!doc;n#addArea#0" expanded="false" />
                   </folding>
@@ -123,7 +148,7 @@
           <file leaf-file-name="ui.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/ui.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="139">
+                <state relative-caret-position="306">
                   <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding />
                 </state>
@@ -137,8 +162,8 @@
           <file leaf-file-name="mapfiles.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/mapfiles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="731">
-                  <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                <state relative-caret-position="459">
+                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -147,7 +172,7 @@
           <file leaf-file-name="DHTML.js" pinned="false" current-in-tab="false">
             <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-44502">
+                <state relative-caret-position="21760">
                   <caret line="1280" column="0" lean-forward="false" selection-start-line="1280" selection-start-column="0" selection-end-line="1280" selection-end-column="0" />
                   <folding />
                 </state>
@@ -158,7 +183,7 @@
             <entry file="file://$PROJECT_DIR$/css/styles.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="153">
-                  <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                  <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -167,8 +192,8 @@
           <file leaf-file-name="tester.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/tester.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="605">
-                  <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+                <state relative-caret-position="731">
+                  <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
                   <folding>
                     <element signature="n#!!doc;n#TestManager#0" expanded="false" />
                   </folding>
@@ -179,7 +204,7 @@
           <file leaf-file-name="hotspot.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/hotspot.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-474">
+                <state relative-caret-position="765">
                   <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
                   <folding />
                 </state>
@@ -189,8 +214,8 @@
           <file leaf-file-name="loadimage.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/loadimage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+                <state relative-caret-position="51">
+                  <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -199,8 +224,8 @@
           <file leaf-file-name="browseimages.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/browseimages.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+                <state relative-caret-position="1275">
+                  <caret line="75" column="24" lean-forward="false" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
@@ -209,9 +234,11 @@
           <file leaf-file-name="geobrowse.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/geobrowse.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-127">
-                  <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-                  <folding />
+                <state relative-caret-position="-576">
+                  <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+                  <folding>
+                    <element signature="n#style#0;n#span#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -219,7 +246,7 @@
           <file leaf-file-name="jquery-1.12.4.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/jquery-1.12.4.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="82">
+                <state relative-caret-position="152337">
                   <caret line="8973" column="0" lean-forward="false" selection-start-line="8973" selection-start-column="0" selection-end-line="8973" selection-end-column="0" />
                   <folding />
                 </state>
@@ -239,7 +266,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>retrieve</find>
       <find>fillFileComboBox</find>
       <find>mapComboboxId.change</find>
       <find>selectedMap</find>
@@ -269,6 +295,7 @@
       <find>getCe</find>
       <find>1000</find>
       <find>hid</find>
+      <find>fill</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;towns.hsf&quot;, &quot;rivers.hsf&quot;</replace>
@@ -294,7 +321,6 @@
         <option value="$PROJECT_DIR$/scripts/parse.js" />
         <option value="$PROJECT_DIR$/scripts/hotspotlist.js" />
         <option value="$PROJECT_DIR$/scripts/mapcomboboxid.js" />
-        <option value="$PROJECT_DIR$/scripts/mapfiles.js" />
         <option value="$PROJECT_DIR$/scripts/mapui.js" />
         <option value="$PROJECT_DIR$/scripts/browseimage.js" />
         <option value="$PROJECT_DIR$/scripts/tester.js" />
@@ -305,9 +331,10 @@
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/scripts/loadimage.js" />
         <option value="$PROJECT_DIR$/geoclick.html" />
-        <option value="$PROJECT_DIR$/geobrowse.html" />
+        <option value="$PROJECT_DIR$/scripts/mapfiles.js" />
         <option value="$PROJECT_DIR$/scripts/testimages.js" />
         <option value="$PROJECT_DIR$/geotest.html" />
+        <option value="$PROJECT_DIR$/geobrowse.html" />
       </list>
     </option>
   </component>
@@ -641,7 +668,8 @@
       <workItem from="1495059962514" duration="587000" />
       <workItem from="1495060699342" duration="65000" />
       <workItem from="1495402217475" duration="15928000" />
-      <workItem from="1495471356348" duration="19863000" />
+      <workItem from="1495471356348" duration="21887000" />
+      <workItem from="1495560317779" duration="3858000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;Test&quot; mode">
       <created>1354473892594</created>
@@ -755,19 +783,25 @@
       <option name="project" value="LOCAL" />
       <updated>1495490929365</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Images and scripts">
+      <created>1495491522485</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1495491522485</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68632000" />
+    <option name="totallyTimeSpent" value="74514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.495114" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.495114" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15852335" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09229099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.259375" sideWeight="0.504886" order="1" side_tool="true" content_ui="tabs" />
@@ -782,6 +816,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -846,7 +881,8 @@
     <MESSAGE value="Sixth refactorying round" />
     <MESSAGE value="GeoBrowse and Geotest" />
     <MESSAGE value="A release at last" />
-    <option name="LAST_COMMIT_MESSAGE" value="A release at last" />
+    <MESSAGE value="Images and scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Images and scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -884,14 +920,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jquery-1.8.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2676" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/jquery-1.8.2.js" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1020,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1064,7 +1092,7 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44502">
+        <state relative-caret-position="21760">
           <caret line="1280" column="0" lean-forward="false" selection-start-line="1280" selection-start-column="0" selection-end-line="1280" selection-end-column="0" />
           <folding />
         </state>
@@ -1077,7 +1105,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery.timer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1085,17 +1113,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jquery-1.8.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8999" column="4" lean-forward="false" selection-start-line="8999" selection-start-column="4" selection-end-line="8999" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/jquery-1.8.2.js" />
     <entry file="file://$PROJECT_DIR$/scripts/ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
@@ -1103,31 +1124,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/browseimages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+        <state relative-caret-position="1275">
+          <caret line="75" column="24" lean-forward="false" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery-1.12.4.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
+        <state relative-caret-position="152337">
           <caret line="8973" column="0" lean-forward="false" selection-start-line="8973" selection-start-column="0" selection-end-line="8973" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/mapfiles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/hotspot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-474">
+        <state relative-caret-position="765">
           <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding />
         </state>
@@ -1135,8 +1148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/mapui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        <state relative-caret-position="272">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
             <element signature="n#!!doc;n#addArea#0" expanded="false" />
           </folding>
@@ -1145,16 +1158,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/marker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="731">
+          <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/tester.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+        <state relative-caret-position="731">
+          <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc;n#TestManager#0" expanded="false" />
           </folding>
@@ -1164,30 +1177,54 @@
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/hotspotlist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
+        <state relative-caret-position="204">
           <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/loadimage.js">
+    <entry file="file://$PROJECT_DIR$/maps/North_America/Canada/towns.hsf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/comboboxes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/mapfiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/testimages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geoclick.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="-34">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1195,43 +1232,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maps/North_America/Canada/towns.hsf">
+    <entry file="file://$PROJECT_DIR$/scripts/loadimage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-633">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geobrowse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        <state relative-caret-position="51">
+          <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geotest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="29" column="86" lean-forward="false" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+        <state relative-caret-position="51">
+          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/comboboxes.js">
+    <entry file="file://$PROJECT_DIR$/geobrowse.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/testimages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287">
-          <caret line="56" column="43" lean-forward="false" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="-576">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

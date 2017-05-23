@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Geoclick v 0.0.9</title>
+    <title>Geoclick v 0.1.0 - Quiz</title>
     <LINK href="css/styles.css?v=2" rel="stylesheet" type="text/css">
     <script
     src="scripts/jquery-1.12.4.js"
     integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
     crossorigin="anonymous"></script>
 
-    <script src="scripts/mapfiles.js?v=9"></script>
-    <script src="scripts/hotspot.js?v=9"></script>
-    <script src="scripts/hotspotlist.js?v=9"></script>
-    <script src="scripts/marker.js?v=9"></script>
-    <script src="scripts/comboboxes.js?v=9"></script>
-    <script src="scripts/mapui.js?v=9"></script>
-    <script src="scripts/ui.js?v=9"></script>
+    <script src="scripts/mapfiles.js?v=10"></script>
+    <script src="scripts/hotspot.js?v=10"></script>
+    <script src="scripts/hotspotlist.js?v=10"></script>
+    <script src="scripts/marker.js?v=10"></script>
+    <script src="scripts/comboboxes.js?v=10"></script>
+    <script src="scripts/mapui.js?v=10"></script>
+    <script src="scripts/ui.js?v=10"></script>
 
-    <script src="scripts/tester.js?v=9"></script>
-    <script src="scripts/testimages.js?v=9"></script>
-
-    <script src="scripts/jquery.imagemapster.js"></script>
+    <script src="scripts/tester.js?v=10"></script>
+    <script src="scripts/testimages.js?v=10"></script>
 
 </head>
 <body onresize="doParse();">
@@ -28,13 +26,12 @@
 
     <div class="menubarClass"><button id="toggleTestButton" onclick="helpMe();">Help</button></div>
     <div class="menubarClass"><button id="startQuizButton" onclick="startQuiz();">(Re)Start Quiz</button></div>
+
+
     <div class="menubarClass" id="hotspotFoundId"></div>
     <div class="menubarClass" ><span id="whereisId"  style="display:none;"></span></div>
+
     <div class="menubarClass" id="clickedOnId"></div>
-    <div class="menubarClassHidden" ><input id="mapTypeNormal" type="checkbox" name="mapType" value="normal" checked>Cheat</div>
-    <div class="menubarClassHidden"><select id="mapComboboxId"></select></div>
-    <div class="menubarClassHidden"><select id="fileComboboxId"></select></div>
-    <div class="menubarClassHidden"><select  id="hotspotComboboxId"></select></div>
 
 
 </div>
