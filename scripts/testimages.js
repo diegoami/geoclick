@@ -6,7 +6,6 @@ var mapUI         = new MapUI('#mapImageId','#paragraphMapId','#hotspotMap','#ho
 var hotspotFoundId         = new HotspotFoundId('#hotspotFoundId')
 
 function addEventsToArea(area)  {
-
     area.mousedown(function() {
         marker.hide();
     });
