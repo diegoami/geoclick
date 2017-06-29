@@ -85,7 +85,8 @@ var imageFileMapping = {
     "USA" : { dir : "North_America/USA/", imgComp : "usa.jpg", imgEmpty : "usm.jpg",height:993,  width : 1350},
     "Oceania" : { dir : "Oceania/Australia/", imgComp : "Australia.jpg", imgEmpty : "Australim.jpg",height:1101,  width : 1025},
     "South_America" : { dir : "South_America/", imgComp : "South_America.jpg", imgEmpty : "South_Americm.jpg", height:1348, width : 1062},
-    "Brazil" : { dir : "South_America/Brazil/", imgComp : "Brazil.jpg", imgEmpty : "Brazim.jpg", height:1430, width : 1307}
+    "Argentina" : { dir : "South_America/Argentina/", imgComp : "Argentina.jpg", imgEmpty : "Argentinm.jpg", height:1302, width : 1068},
+	"Brazil" : { dir : "South_America/Brazil/", imgComp : "Brazil.jpg", imgEmpty : "Brazim.jpg", height:1430, width : 1307}
 };
 
 
@@ -121,6 +122,7 @@ var hotspotFileMapping = {
     "USA" : ["states.hsf", "towns.hsf", "rivers.hsf"],
     "Australia" : ["regions.hsf", "towns.hsf", "rivers.hsf"],
     "South_America" : ["countries.hsf", "rivers.hsf","towns.hsf"] ,
-    "Brazil" : ["regions.hsf", "towns.hsf", "rivers.hsf", ]
+    "Argentina" : ["regions.hsf", "towns.hsf"],
+	"Brazil" : ["regions.hsf", "towns.hsf", "rivers.hsf" ]
 }
 
