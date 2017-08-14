@@ -70,7 +70,7 @@ function fillFileComboBox() {
 }
 
 function begin() {
-    mapComboboxId.fill(Object.keys(imageFileMapping ));
+    mapComboboxId.fill(Object.keys(imageFileMapping ).sort()    );
     mapComboboxId.change( changeImageEvent);
     loadImageMapping();
     fillFileComboBox( );

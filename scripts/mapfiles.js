@@ -51,8 +51,6 @@ MapManager.prototype.getImagePath = function(selectedId, normal) {
     return './maps/'+dir + fileName;;
 }
 
-
-
 var imageFileMapping = {
     "Africa" : { dir : "Africa/", imgComp : "Africa.jpg", imgEmpty : "Africm.jpg",height:1051, width : 1038} ,
     "Asia" : { dir : "Asia/", imgComp : "Asia.jpg", imgEmpty : "Asim.jpg",height:1316, width : 1062} ,
@@ -83,7 +81,7 @@ var imageFileMapping = {
     "Canada" : { dir : "North_America/Canada/", imgComp : "Canada.jpg", imgEmpty : "Canadm.jpg", height:920, width : 980},
     "Mexico" : { dir : "North_America/Mexico/", imgComp : "mexico.jpg", imgEmpty : "mexicm.jpg", height:981, width : 1200},
     "USA" : { dir : "North_America/USA/", imgComp : "usa.jpg", imgEmpty : "usm.jpg",height:993,  width : 1350},
-    "Oceania" : { dir : "Oceania/Australia/", imgComp : "Australia.jpg", imgEmpty : "Australim.jpg",height:1101,  width : 1025},
+    "Australia" : { dir : "Oceania/Australia/", imgComp : "Australia.jpg", imgEmpty : "Australim.jpg",height:1101,  width : 1025},
     "South_America" : { dir : "South_America/", imgComp : "South_America.jpg", imgEmpty : "South_Americm.jpg", height:1348, width : 1062},
     "Argentina" : { dir : "South_America/Argentina/", imgComp : "Argentina.jpg", imgEmpty : "Argentinm.jpg", height:1302, width : 1068},
 	"Brazil" : { dir : "South_America/Brazil/", imgComp : "Brazil.jpg", imgEmpty : "Brazim.jpg", height:1430, width : 1307}
