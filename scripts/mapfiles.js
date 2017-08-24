@@ -70,6 +70,7 @@ var imageFileMapping = {
     "Netherlands" : { dir : "Europe/Netherlands/", imgComp : "Netherlands.jpg", imgEmpty : "Netherlandm.jpg", height:1148, width : 1008} ,
     "Norway" : { dir : "Europe/Norway/", imgComp : "Norway.jpg", imgEmpty : "Norwam.jpg", height:1220, width : 980},
     "Poland" : { dir : "Europe/Poland/", imgComp : "poland.jpg", imgEmpty : "polanm.jpg" , height:844, width : 848},
+    "Romania" : { dir : "Europe/Romania/", imgComp : "romania.jpg", imgEmpty : "romanim.jpg" , height:1192, width : 1112},    
     "Russia" : { dir : "Europe/Russia/", imgComp : "russia.jpg", imgEmpty : "russim.jpg", height:1104, width : 1620} ,
     "Spain" : { dir : "Europe/Spain/", imgComp : "Spain.jpg", imgEmpty : "Spaim.jpg" , height:902, width : 1131},
     "Sweden" : { dir : "Europe/Sweden/", imgComp : "sweden.jpg", imgEmpty : "swedem.jpg" , height:1228, width : 988},
@@ -107,6 +108,7 @@ var hotspotFileMapping = {
     "Netherlands" : ["regions.hsf", "towns.hsf"] ,
     "Norway" : ["regions.hsf", "towns.hsf", "rivers.hsf"] ,
     "Poland" : ["regions.hsf", "towns.hsf", "rivers.hsf"] ,
+    "Romania" : ["regions.hsf", "towns.hsf"] ,
     "Russia" : [ "towns.hsf", "rivers.hsf"] ,
     "Spain" : ["regions.hsf", "towns.hsf", "rivers.hsf"] ,
     "Sweden" : ["lan.hsf", "towns.hsf", "rivers.hsf"] ,
@@ -121,6 +123,6 @@ var hotspotFileMapping = {
     "Australia" : ["regions.hsf", "towns.hsf", "rivers.hsf"],
     "South_America" : ["countries.hsf", "rivers.hsf","towns.hsf"] ,
     "Argentina" : ["regions.hsf", "towns.hsf"],
-	"Brazil" : ["regions.hsf", "towns.hsf", "rivers.hsf" ]
+    "Brazil" : ["regions.hsf", "towns.hsf", "rivers.hsf" ]
 }
 
